@@ -12,6 +12,7 @@ const Layout = styled.div`
 function App() {
   return (
     <ThemeProvider theme={lightTheme}>
+    
     <GlobalStyle/>
     <Layout>
       <Header/>
