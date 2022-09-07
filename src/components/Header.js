@@ -9,6 +9,9 @@ import LangIconBlack from '../assets/images/black-lang-icon.gif'
 import AllMenuIcon from '../assets/images/allMenu-icon.gif'
 import AllMenuIconBlack from '../assets/images/allMenu-icon-black.gif'
 import SubGnbOverCategory from './HeaderComponents/SubGnbOverCategory'
+import FacebookIcon from '../assets/images/facebook.png'
+import InstagramIcon from '../assets/images/instagram.png'
+import BandIcon from '../assets/images/band.png'
 
 
 const Container = styled.div`
@@ -361,7 +364,9 @@ const Header = () => {
             }}
             >
                 <div className='subGndOver' style={(mouseOver === 'Off') ? { top: '-360px' } : { top: '80px' }}>
+                {/* <div className='subGndOver' style={{ top: '80px' }}> */}
                     <GnbOverContainer style={topHeight[heightIndex]}>
+                    {/* <GnbOverContainer style={{top:}}> */}
                         {menuItemData.map((index) => {
                             return <SubGnbOverCategory key={index.key} data={index.array}></SubGnbOverCategory>
                         })}
@@ -373,7 +378,35 @@ const Header = () => {
                             <span className='line'></span>
                             <a href='/'>공지사항</a>
                         </div>
+                        <div  className='btnArea'>
+                            <ul className='lang'>
+                                <li>
+                                    <a href='/'>KOR</a>
+                                </li>
+                                <li>
+                                    <a href='/' style={{color: 'black'}}>ENG</a>
+                                </li>
+                            </ul>
+                            <ul className='sns'>
+                                <li>
+                                    <a href='https://www.facebook.com'>
+                                        <img src={FacebookIcon} alt="facebook"></img>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='https://www.facebook.com'>
+                                        <img src={InstagramIcon} alt="instagram"></img>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='https://www.facebook.com'>
+                                        <img src={BandIcon} alt="band"></img>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+                    
 
                 </div>
             </SubGndOver>
