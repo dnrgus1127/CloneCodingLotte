@@ -1,16 +1,19 @@
-
 @charset "utf-8";
 
-@font-face  {
-    font-family: "NotoSansKr_Black";
-    src: url("./assets/fonts/NotoSansKRBlack.otf")
+@font-face {
+  font-family: "NotoSansKr_Black";
+  src: url("./assets/fonts/NotoSansKRBlack.otf")
 }
 
-@font-face  {
-    font-family: "NotoSansKR_Regular";
-    src: url("../src/assets/fonts/NotoSansKR-Regular.otf")
+@font-face {
+  font-family: "NotoSansKR_Regular";
+  src: url("../src/assets/fonts/NotoSansKR-Regular.otf")
 }
-a, ul, li, h3 {
+
+a,
+ul,
+li,
+h3 {
   padding: 0;
   margin: 0;
 }
@@ -27,9 +30,9 @@ button {
 }
 
 a {
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
@@ -41,33 +44,34 @@ li {
 
 .subSearchInput {
   height: 40px;
-    background:  #000;
-    color: #fff;
-    border-radius: 20px;
-    padding : 10px 20px;
-    position: absolute;
-    top: 0;;
-    right: 0;
-    border: none;
-    cursor: pointer;
-    opacity: 1;
-    transition: 0.4s all ease-in-out;
-    outline: none;
+  background: #000;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  ;
+  right: 0;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.4s all ease-in-out;
+  outline: none;
 }
 
 .langBtnArea {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top:0;
-    right:0;
-    height: 40px;
-    background-color: #000;
-    border-radius: 20px;
-    padding-right: 20px;
-    overflow: hidden;
-    transition: 0.4s all ease-in-out;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  height: 40px;
+  background-color: #000;
+  border-radius: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+  transition: 0.4s all ease-in-out;
 }
 
 .langUnselect {
@@ -80,37 +84,37 @@ li {
 }
 
 .gndOff {
-    /* @media screen and(max-width: 1200px){
+  /* @media screen and(max-width: 1200px){
         padding : 0 4%;
     } */
-    padding : 0 64px;
-    height: 80px;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-  
+  padding: 0 64px;
+  height: 80px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+
 
 
 }
 
 .gndOn {
-      /* Global Navigation Bar */
-      /* @media screen and(max-width: 1200px){
+  /* Global Navigation Bar */
+  /* @media screen and(max-width: 1200px){
         padding : 0 4%;
     } */
-    padding : 0 64px;
-    height: 80px;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    transition: 0.4s all ease-in-out;
-    opacity: 0.9;
+  padding: 0 64px;
+  height: 80px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  transition: 0.4s all ease-in-out;
+  opacity: 0.9;
 
 }
 
 .gndOn Button {
-  color:black;
+  color: black;
 }
 
 .d2Menu {
@@ -145,7 +149,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding : 0 64px;
+  padding: 0 64px;
   bottom: 0;
   width: 100%;
   height: 60px;
@@ -159,14 +163,26 @@ li {
   align-items: center;
 }
 
-/* .subGnbOver{
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 360px;
-  background-color: #f9f9f9;
-  overflow: hidden;
-} */
+.subGnbOver_util .support>p {
+  font-family: 'NotoSansKR_Regular';
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 30px;
+}
 
+.support>a {
+  font-family: "NotoSansKR_Regular";
+  font-size: 14px;
+  font-weight: 500;
+  color: #999;
+  cursor: pointer
+}
 
+.line {
+  display: block;
+  width: 1px;
+  height: 20px;
+  background-color: #000;
+  margin-left: 20px;
+  margin-right: 20px;
+}

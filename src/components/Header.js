@@ -141,7 +141,7 @@ const Header = () => {
     const menuItemData = [
         {
             key: 1,
-            array :[
+            array: [
                 {
                     key: 1,
                     title: "회사개요",
@@ -166,7 +166,7 @@ const Header = () => {
         },
         {
             key: 2,
-            array :[
+            array: [
                 {
                     key: 1,
                     title: "케미칼사업부문",
@@ -186,7 +186,7 @@ const Header = () => {
         },
         {
             key: 3,
-            array :[
+            array: [
                 {
                     key: 1,
                     title: "주식정보",
@@ -206,7 +206,7 @@ const Header = () => {
         },
         {
             key: 4,
-            array :[
+            array: [
                 {
                     key: 1,
                     title: "회사개요",
@@ -231,7 +231,7 @@ const Header = () => {
         },
         {
             key: 5,
-            array :[
+            array: [
                 {
                     key: 1,
                     title: "회사개요",
@@ -260,7 +260,7 @@ const Header = () => {
 
             ]
         },
-        
+
     ]
 
 
@@ -271,9 +271,13 @@ const Header = () => {
     const [heightIndex, setHeightIndex] = useState(0);
 
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    // const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
     return (
-        <Container >
+        <Container onMouseLeave={() => {
+            setTimeout(function () {
+                setMouseOver('Off')
+            }, 300)
+
+        }} >
             <GNB className={(mouseOver === 'Off') ? 'gndOff' : 'gndOn'}>
                 <Logo>
                     <LotteImg src={(mouseOver === 'Off') ? LogoImg : LogoRed} alt="LOTTE Fine Chemical">
@@ -281,9 +285,9 @@ const Header = () => {
                     </LotteImg>
                 </Logo>
 
-                <SubGnb onMouseOver={() => {
+                <SubGnb onMouseEnter={() => {
                     setMouseOver('On')
-                }} 
+                }}
                 >
                     <Li>
                         <Button onMouseOver={() => {
@@ -351,15 +355,24 @@ const Header = () => {
                     </UtilItem>
                 </UtilMenu>
             </GNB>
-            <SubGndOver>
-                <div className='subGndOver'  style={(mouseOver === 'Off') ? { top: '-360px' } : { top: '80px' }}>
-                    <GnbOverContainer  style={topHeight[heightIndex]}>
-                        {menuItemData.map((index)=>{
+
+            <SubGndOver onMouseEnter={() => {
+                setMouseOver('On')
+            }}
+            >
+                <div className='subGndOver' style={(mouseOver === 'Off') ? { top: '-360px' } : { top: '80px' }}>
+                    <GnbOverContainer style={topHeight[heightIndex]}>
+                        {menuItemData.map((index) => {
                             return <SubGnbOverCategory key={index.key} data={index.array}></SubGnbOverCategory>
                         })}
                     </GnbOverContainer>
                     <div className='subGnbOver_util'>
-                        <div className='support'></div>
+                        <div className='support'>
+                            <p>문의</p>
+                            <a href='/'>담당자 안내</a>
+                            <span className='line'></span>
+                            <a href='/'>공지사항</a>
+                        </div>
                     </div>
 
                 </div>
