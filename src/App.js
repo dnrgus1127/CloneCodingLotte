@@ -4,6 +4,7 @@ import Header from './components/Header';
 import { GlobalStyle } from './style/global';
 import { ThemeProvider } from 'styled-components'
 import { lightTheme } from './style/theme';
+import { Main } from './components/Main';
 
 const Layout = styled.div`
 
@@ -14,9 +15,12 @@ function App() {
     <ThemeProvider theme={lightTheme}>
     
     <GlobalStyle/>
-    <Layout>
+    <Layout className='Layout'>
       <Header/>
+      <Main/>
+
     </Layout>
+
     </ThemeProvider>
   );
 }
