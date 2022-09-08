@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from "swiper/react";
 import '../css/Main.css'
@@ -50,6 +50,7 @@ const Bg = styled.div`
     position: relative;
     left: 0;
     top:0;
+    
     video {
         position: absolute;
         z-index: inherit;
@@ -71,6 +72,8 @@ const Img = styled.img`
     height: 100%;
     width: 100%;
     object-fit: cover;
+    transition: all 15s linear;
+    transform: "scale(1,1)";
     
 `
 
@@ -79,6 +82,9 @@ const Img = styled.img`
 
 export const Main = () => {
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    const [sliderIndex,setSliderIndex] = useState(0);
+
+
 
     return (
         <Container style={{ height: vh }}>
@@ -91,16 +97,17 @@ export const Main = () => {
                     scrollbar={{ draggable: true }}
                     navigation
                     // pagination={{ clickable: true }}
-                    autoplay={{ delay: 2000 }}
+                    autoplay={{ delay: 15000 }}
                     loop={true}
                     effect='fade'
                     speed={1000}
-
-
+                    onSlideChange={(index) => {
+                        setSliderIndex(index.snapIndex)
+                    }}
                 >
                     <SwiperSlide>
                         <Bg >
-                            <video autoplay="autoplay" loop="loop" muted="muted" playsinline>
+                            <video autoPlay="autoPlay" loop="loop" muted="muted" playsInline>
                                 <source src={BGVideo2} type="video/mp4"></source>
                             </video>
                             <div className='cover'>
@@ -109,7 +116,7 @@ export const Main = () => {
                     </SwiperSlide>
                     <SwiperSlide >
                         <Bg >
-                            <video autoplay="autoplay" loop="loop" muted="muted" playsinline>
+                            <video autoPlay="autoPlay" loop="loop" muted="muted" playsInline>
                                 <source src={BGVideo1} type="video/mp4"></source>
                             </video>
                             <div className='cover'>
@@ -117,19 +124,19 @@ export const Main = () => {
                         </Bg>
                     </SwiperSlide>
 
-                    <SwiperSlide>
+                    <SwiperSlide >
                         <Bg>
-                            <Img src={BGImg1} alt=''></Img>
-                        </Bg>Bg
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Bg >
-                            <Img src={BGImg2} alt=''></Img>
+                            <Img src={BGImg1} alt='' style={(sliderIndex === 3) ? {transform: "scale(1.1,1.1)"} : null}></Img>
                         </Bg>
                     </SwiperSlide>
                     <SwiperSlide>
                         <Bg >
-                            <Img src={BGImg3} alt=''></Img>
+                            <Img src={BGImg2} alt='' style={(sliderIndex === 4) ? {transform: "scale(1.1,1.1)"} : null}></Img>
+                        </Bg>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <Bg >
+                            <Img src={BGImg3} alt='' style={(sliderIndex === 5) ? {transform: "scale(1.1,1.1)"} : null}></Img>
                         </Bg>
                     </SwiperSlide>
                 </StyledSwiper>
