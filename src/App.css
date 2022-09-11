@@ -10,10 +10,16 @@
   src: url("../src/assets/fonts/NotoSansKR-Regular.otf")
 }
 
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../src/assets/fonts/Barlow-Black.ttf")
+}
+
 a,
 ul,
 li,
-h3
+h3,
 div {
   padding: 0;
   margin: 0;

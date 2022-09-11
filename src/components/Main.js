@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Swiper, SwiperSlide } from "swiper/react";
 import '../css/Main.css'
@@ -12,6 +12,7 @@ import BGImg3 from '../assets/images/main-img-investment.gif'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade } from 'swiper';
 import BGVideo1 from '../assets/images/video/Main_ESG.mp4'
 import BGVideo2 from '../assets/images/video/Main_Factory.mp4'
+import { MainContent } from './MainComponents/MainContent';
 
 
 
@@ -72,7 +73,7 @@ const Img = styled.img`
     height: 100%;
     width: 100%;
     object-fit: cover;
-    transition: all 15s linear;
+    transition: all 20s ease;
     transform: "scale(1,1)";
     
 `
@@ -82,7 +83,7 @@ const Img = styled.img`
 
 export const Main = () => {
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-    const [sliderIndex,setSliderIndex] = useState(0);
+    const [sliderIndex, setSliderIndex] = useState(1);
 
 
 
@@ -96,13 +97,14 @@ export const Main = () => {
                     slidesPerView={1}
                     scrollbar={{ draggable: true }}
                     navigation
-                    // pagination={{ clickable: true }}
+                    pagination={{ clickable: false }}
                     autoplay={{ delay: 15000 }}
                     loop={true}
                     effect='fade'
                     speed={1000}
                     onSlideChange={(index) => {
                         setSliderIndex(index.snapIndex)
+                        console.log(sliderIndex)
                     }}
                 >
                     <SwiperSlide>
@@ -113,6 +115,9 @@ export const Main = () => {
                             <div className='cover'>
                             </div>
                         </Bg>
+                        <MainContent select={(sliderIndex === 1) ? true : false}>
+
+                        </MainContent>
                     </SwiperSlide>
                     <SwiperSlide >
                         <Bg >
@@ -122,23 +127,36 @@ export const Main = () => {
                             <div className='cover'>
                             </div>
                         </Bg>
+                        <MainContent select={(sliderIndex === 2) ? true : false}>
+
+                        </MainContent>
                     </SwiperSlide>
 
                     <SwiperSlide >
                         <Bg>
-                            <Img src={BGImg1} alt='' style={(sliderIndex === 3) ? {transform: "scale(1.1,1.1)"} : null}></Img>
+                            <Img src={BGImg1} alt='' style={(sliderIndex === 3) ? { transform: "scale(1.1,1.1)" } : null}></Img>
                         </Bg>
+                        <MainContent select={(sliderIndex === 3) ? true : false}>
+
+                        </MainContent>
                     </SwiperSlide>
                     <SwiperSlide>
                         <Bg >
-                            <Img src={BGImg2} alt='' style={(sliderIndex === 4) ? {transform: "scale(1.1,1.1)"} : null}></Img>
+                            <Img src={BGImg2} alt='' style={(sliderIndex === 4) ? { transform: "scale(1.1,1.1)" } : null}></Img>
                         </Bg>
+                        <MainContent select={(sliderIndex === 4) ? true : false}>
+
+                        </MainContent>
                     </SwiperSlide>
                     <SwiperSlide>
                         <Bg >
-                            <Img src={BGImg3} alt='' style={(sliderIndex === 5) ? {transform: "scale(1.1,1.1)"} : null}></Img>
+                            <Img src={BGImg3} alt='' style={(sliderIndex === 5) ? { transform: "scale(1.1,1.1)" } : null}></Img>
                         </Bg>
+                        <MainContent select={(sliderIndex === 5) ? true : false}>
+
+                        </MainContent>
                     </SwiperSlide>
+
                 </StyledSwiper>
 
             </MainBanner>
