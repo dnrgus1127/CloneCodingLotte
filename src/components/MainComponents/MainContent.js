@@ -16,13 +16,13 @@ export const MainContent = ({ select }) => {
     return (
         <div className='content'>
             <div>
-                <h3 style={(select === true) ? defalut : selected}>About Us</h3>
+                <h3 style={(select === false) ? defalut : selected}>About Us</h3>
             </div>
             <div>
-                <p style={(select === true) ? defalut : selected}>지속가능경영을 통해<br></br> 더 나은 내일을 만드는 화학 기업</p>
+                <p className='transUp' style={(select === false) ? defalut : selected}>지속가능경영을 통해<br></br> 더 나은 내일을 만드는 화학 기업</p>
             </div>
             <div>
-                <a style={(select === true) ? defalut : selected} href='/' className='more'>More</a>
+                <a style={(select === false) ? defalut : selected} href='/' className='more'>more</a>
             </div>
         </div>
     )

@@ -20,7 +20,8 @@ a,
 ul,
 li,
 h3,
-div {
+div,
+p {
   padding: 0;
   margin: 0;
 }

@@ -84,7 +84,7 @@ const Img = styled.img`
 export const Main = () => {
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
     const [sliderIndex, setSliderIndex] = useState(1);
-
+    
 
 
     return (
@@ -103,12 +103,18 @@ export const Main = () => {
                     effect='fade'
                     speed={1000}
                     onSlideChange={(index) => {
-                        setSliderIndex(index.snapIndex)
-                        console.log(sliderIndex)
+                        setTimeout(function () {
+                            setSliderIndex(index.realIndex)
+                            console.log(sliderIndex)
+                        },1000)
+
+
+                        
+
                     }}
                 >
                     <SwiperSlide>
-                        <Bg >
+                        <Bg>
                             <video autoPlay="autoPlay" loop="loop" muted="muted" playsInline>
                                 <source src={BGVideo2} type="video/mp4"></source>
                             </video>
