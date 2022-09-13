@@ -13,6 +13,7 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade } from 's
 import BGVideo1 from '../assets/images/video/Main_ESG.mp4'
 import BGVideo2 from '../assets/images/video/Main_Factory.mp4'
 import { MainContent } from './MainComponents/MainContent';
+import MainBottomContent from './MainComponents/MainBottomContent';
 
 
 
@@ -20,7 +21,7 @@ const Container = styled.div`
     display: block;
     position: relative;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 
 `
 
@@ -36,12 +37,6 @@ const StyledSwiper = styled(Swiper)`
     background-color: white;
     height: 100%;
     /* width: 300px; */
-    .mainContentItem {
-        position: relative;
-        overflow: hidden;
-        height: 100vh;
-
-    }
 
 
 `
@@ -95,16 +90,16 @@ export const Main = () => {
                     spaceBetween={50}
 
                     slidesPerView={1}
-                    scrollbar={{ draggable: true }}
+                    // scrollbar={{ draggable: true }}
                     navigation
-                    pagination={{ clickable: false }}
+                    // paginatㄹion={{ clickable: false }}
                     autoplay={{ delay: 15000 }}
                     loop={true}
                     effect='fade'
                     speed={1000}
                     onSlideChange={(index) => {
                         setTimeout(function () {
-                            setSliderIndex(index.realIndex)
+                            setSliderIndex(index.realIndex + 1)
                             console.log(sliderIndex)
                         },1000)
 
@@ -121,7 +116,7 @@ export const Main = () => {
                             <div className='cover'>
                             </div>
                         </Bg>
-                        <MainContent select={(sliderIndex === 1) ? true : false}>
+                        <MainContent index = "1" select={(sliderIndex === 1) ? true : false}>
 
                         </MainContent>
                     </SwiperSlide>
@@ -133,7 +128,7 @@ export const Main = () => {
                             <div className='cover'>
                             </div>
                         </Bg>
-                        <MainContent select={(sliderIndex === 2) ? true : false}>
+                        <MainContent index = "2" select={(sliderIndex === 2) ? true : false}>
 
                         </MainContent>
                     </SwiperSlide>
@@ -142,7 +137,7 @@ export const Main = () => {
                         <Bg>
                             <Img src={BGImg1} alt='' style={(sliderIndex === 3) ? { transform: "scale(1.1,1.1)" } : null}></Img>
                         </Bg>
-                        <MainContent select={(sliderIndex === 3) ? true : false}>
+                        <MainContent index = "3" select={(sliderIndex === 3) ? true : false}>
 
                         </MainContent>
                     </SwiperSlide>
@@ -150,7 +145,7 @@ export const Main = () => {
                         <Bg >
                             <Img src={BGImg2} alt='' style={(sliderIndex === 4) ? { transform: "scale(1.1,1.1)" } : null}></Img>
                         </Bg>
-                        <MainContent select={(sliderIndex === 4) ? true : false}>
+                        <MainContent index = "4" select={(sliderIndex === 4) ? true : false}>
 
                         </MainContent>
                     </SwiperSlide>
@@ -158,7 +153,7 @@ export const Main = () => {
                         <Bg >
                             <Img src={BGImg3} alt='' style={(sliderIndex === 5) ? { transform: "scale(1.1,1.1)" } : null}></Img>
                         </Bg>
-                        <MainContent select={(sliderIndex === 5) ? true : false}>
+                        <MainContent index = "5" select={(sliderIndex === 5) ? true : false}>
 
                         </MainContent>
                     </SwiperSlide>
@@ -166,6 +161,8 @@ export const Main = () => {
                 </StyledSwiper>
 
             </MainBanner>
+            <MainBottomContent/>
+
         </Container>
     )
 }

@@ -7,18 +7,18 @@
     height: 100%;
     top: 0;
     left: 0;
-    padding : 0 90px;
+    padding: 0 90px;
     z-index: inherit;
 }
 
-.content>div{
+.content>div {
     width: auto;
     height: auto;
     overflow: hidden;
 
 }
 
-.content h3{
+.content h3 {
     font-family: 'Barlow_Medium';
     font-size: 80px;
     font-weight: 700;
@@ -28,7 +28,8 @@
 
 
 }
-.content p{
+
+.content p {
     font-family: 'NotoSansKR_Regular';
     color: #fff;
     font-size: 24px;
@@ -39,7 +40,7 @@
 
 }
 
-    
+
 .more {
     font-size: 12px;
     display: flex;
@@ -56,3 +57,65 @@
     transition: all 1000ms ease-out 0s;
 
 }
+
+
+/* MainBottom Content */
+
+.expoLogo {
+    position: absolute;
+    top: 20px;
+    right: 420px;
+}
+
+.expoLogo img {
+    width: 420px;
+    height: auto;
+}
+
+.mainBottomContent {
+    position : relative;
+    margin-top: 60px;
+    padding : 20px 0 20px 20px;
+    border-left:  1px solid hsla(0,0%,93.7%,.5);
+    overflow-y : hidden;
+    overflow-x : auto;
+}
+
+.topUi {
+    display: flex;
+    padding-bottom: 60px;
+    justify-content: space-between;
+    width: 754px;
+
+}
+.topUi p {
+    font-family: 'NotoSansKR-Regular';
+    font-size: 14px;
+    font-weight: 550;
+    margin-top: 10px;
+    line-height: 20px;
+    color: black
+}
+
+.title {
+    width: auto;
+    height: 13px;
+    cursor: pointer
+
+}
+.title>img {
+    height: 100%;
+    width: auto;
+}
+.photo {
+    width: auto;
+    height: 68px;
+    margin-top: 10px;
+}
+.photo img {
+    height: 100%;
+    width: auto;
+
+}
+
+
