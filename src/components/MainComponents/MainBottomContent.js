@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import expologo from '../../assets/images/expologo_w@2x.ab85544.gif'
+import expologoColor from '../../assets/images/expologoColor.gif'
 import companyTitle from '../../assets/images/bottom/company.gif'
 import companyPhoto from '../../assets/images/bottom/Company_photo.gif'
 import '../../css/Main.css'
@@ -38,7 +39,7 @@ const MainBottomContent = () => {
     return (
         <Container>
             <div className='expoLogo'>
-                <img src={expologo} alt="2030 부산세계박람회"></img>
+                <img src={expologoColor} alt="2030 부산세계박람회"></img>
             </div>
             <div className='mainBottomContent'>
                 <ul className='topUi'>
