@@ -18,6 +18,20 @@ const Container = styled.div`
     z-index: 900;
     align-items: flex-end;
     flex-flow: column;
+    padding-left: 145px;
+    padding-right: 145px;
+`
+
+const StockHead = styled.div`
+    border-bottom: 1.5px solid black;
+    display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   padding-bottom: 8px;
+
+`
+
+const StockBottom = styled.div`
 `
 
 const MainBottomContent = () => {
@@ -55,6 +69,13 @@ const MainBottomContent = () => {
                     <li>
                         <div className='title'>
                             <img src={investerTitle} alt=""></img>
+                        </div>
+                        <div className='stock'>
+                            <StockHead>
+                                <p className='stockPrice'>68,800 <span> KRW</span></p>
+                                <p className='prepare'>500</p>
+                            </StockHead>
+                            <StockBottom></StockBottom>
                         </div>
                     </li>
                 </ul>

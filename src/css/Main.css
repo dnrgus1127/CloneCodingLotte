@@ -1,3 +1,5 @@
+
+
 .content {
     position: absolute;
     display: flex;
@@ -88,7 +90,7 @@
     width: 754px;
 
 }
-.topUi p {
+.topUi li>p {
     font-family: 'NotoSansKR-Regular';
     font-size: 14px;
     font-weight: 550;
@@ -118,4 +120,42 @@
 
 }
 
+
+.stock {
+    width: 213px;
+    height: 75px;
+    margin-top: 22px;
+}
+
+.stockPrice {
+    font-family: 'Barlow';
+    font-size: 32px;
+    font-weight: 500;
+    padding-left : 5px;
+}
+
+.stockPrice span {
+    font-family: 'Barlow';
+    font-size: 12px;
+    font-weight: 550;
+}
+
+.prepare {
+    font-family: 'Barlow';
+    font-size : 11px;
+    font-weight: 300;
+    color: #899
+}
+
+.prepare::before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 10px;
+    margin-right: 12px;
+    background-image: url('../assets/images/stockIcon.png');
+    /* C:\Users\WIN10\Desktop\reactpractice\lottechemical\src\assets\images\stock-icon-inc@2x.gif */
+}
 
