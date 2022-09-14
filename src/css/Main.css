@@ -1,5 +1,3 @@
-
-
 .content {
     position: absolute;
     display: flex;
@@ -66,7 +64,7 @@
 .expoLogo {
     position: absolute;
     top: 20px;
-    right: 420px;
+    right: 480px;
 }
 
 .expoLogo img {
@@ -75,12 +73,12 @@
 }
 
 .mainBottomContent {
-    position : relative;
+    position: relative;
     margin-top: 60px;
-    padding : 20px 0 20px 20px;
-    border-left:  1px solid hsla(0,0%,93.7%,.5);
-    overflow-y : hidden;
-    overflow-x : auto;
+    padding: 20px 0 20px 20px;
+    border-left: 1px solid hsla(0, 0%, 93.7%, .5);
+    overflow-y: hidden;
+    overflow-x: auto;
 }
 
 .topUi {
@@ -90,6 +88,7 @@
     width: 754px;
 
 }
+
 .topUi li>p {
     font-family: 'NotoSansKR-Regular';
     font-size: 14px;
@@ -103,17 +102,19 @@
     width: auto;
     height: 13px;
     cursor: pointer
-
 }
+
 .title>img {
     height: 100%;
     width: auto;
 }
+
 .photo {
     width: auto;
     height: 68px;
     margin-top: 10px;
 }
+
 .photo img {
     height: 100%;
     width: auto;
@@ -131,7 +132,7 @@
     font-family: 'Barlow';
     font-size: 32px;
     font-weight: 500;
-    padding-left : 5px;
+    padding-left: 5px;
 }
 
 .stockPrice span {
@@ -142,16 +143,17 @@
 
 .prepare {
     font-family: 'Barlow';
-    font-size : 11px;
+    font-size: 11px;
     font-weight: 300;
     color: #899
 }
 
-.prepare::before {
+.prepare::before, .stockRate::before {
     content: " ";
     display: inline-block;
     position: relative;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    background-size: contain;
     width: 12px;
     height: 10px;
     margin-right: 12px;
@@ -159,3 +161,76 @@
     /* C:\Users\WIN10\Desktop\reactpractice\lottechemical\src\assets\images\stock-icon-inc@2x.gif */
 }
 
+
+.stockDate,
+.stockRate {
+    font-family: 'Barlow';
+    font-size: 10px;
+    font-weight: 400;
+    color: #999;
+}
+
+.businessCon {
+    height: 135px;
+    width: 370px;
+    overflow: hidden;
+    border : 1px solid rgba(0,0,0,.1);
+    position : relative;
+}
+
+.businessCon img:hover {
+    position: relative;
+    transform : scale(1.05);
+    opacity: .8;
+    filter : grayscale(80%);
+    transition: all .4s linear;
+
+}
+
+.marginBottom {
+    margin-bottom : 12px;
+}
+
+.businessCon>p {
+    position : absolute;
+    left: 20px;
+    bottom: 45px;
+    
+    font-family: 'NotoSansKR-Regular';
+    font-size: 14px;
+    font-weight: 550;
+    color: black
+}
+
+.middleUi {
+    display: flex;
+    padding-bottom: 60px;
+    justify-content: space-between;
+    width: 754px;
+}
+
+.btnDetail {
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    text-align: center;
+    align-items: center;
+    transition: all 0.4s linear;
+    display: flex;
+    column-gap: 10px;
+}
+
+.btnDetail a:hover {
+    background-color: black;
+}
+
+.btnDetail a {
+    background-color: rgba(0,0,0, 0.4);
+    border-radius: 4px;
+    display: flex;
+    font-size : 9px;
+    font-weight: 700;
+    color: white;
+    font-family: 'NotoSansKR-Regular';
+    padding : 3px 11px;
+}
