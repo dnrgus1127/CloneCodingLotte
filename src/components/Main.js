@@ -21,7 +21,7 @@ const Container = styled.div`
     display: block;
     position: relative;
     width: 100%;
-    /* overflow: hidden; */
+    overflow: hidden;
 
 `
 
@@ -93,19 +93,15 @@ export const Main = () => {
                     // scrollbar={{ draggable: true }}
                     navigation
                     // paginatㄹion={{ clickable: false }}
-                    autoplay={{ delay: 15000 }}
+                    autoplay={{ delay: 5000 }}
                     loop={true}
                     effect='fade'
                     speed={1000}
                     onSlideChange={(index) => {
                         setTimeout(function () {
                             setSliderIndex(index.realIndex + 1)
-                            console.log(sliderIndex)
-                        },1000)
-
-
-                        
-
+                            // console.log(sliderIndex)
+                        },500)
                     }}
                 >
                     <SwiperSlide>
@@ -161,7 +157,7 @@ export const Main = () => {
                 </StyledSwiper>
 
             </MainBanner>
-            <MainBottomContent/>
+            <MainBottomContent index={sliderIndex}/>
 
         </Container>
     )

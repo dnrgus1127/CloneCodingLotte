@@ -59,6 +59,11 @@
 }
 
 
+
+.relative {
+    position: relative;
+    transition: all .5s ease-out;
+}
 /* MainBottom Content */
 
 .expoLogo {
@@ -83,19 +88,24 @@
 
 .topUi {
     display: flex;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     justify-content: space-between;
     width: 754px;
 
 }
 
-.topUi li>p {
+.topUi li {
+    width: 213px;
+}
+
+.topUi li>.text {
     font-family: 'NotoSansKR-Regular';
-    font-size: 14px;
+    font-size: 12.5px;
     font-weight: 550;
     margin-top: 10px;
     line-height: 20px;
-    color: black
+    /* color: black; */
+    min-height: 40px;
 }
 
 .title {
@@ -170,6 +180,10 @@
     color: #999;
 }
 
+.closeTab .stockPrice{
+    color : #fff;
+}
+
 .businessCon {
     height: 135px;
     width: 370px;
@@ -234,3 +248,91 @@
     font-family: 'NotoSansKR-Regular';
     padding : 3px 11px;
 }
+
+.cm_pd {
+    padding-left: 145px;
+    padding-right: 145px;
+}
+
+@media (max-width: 1200px) {
+    .cm_pd {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+
+
+.bottomBtnArea {
+    position: absolute;
+    top: 19px;
+    right: 919px;
+
+}
+
+.close {
+    position : absolute;
+    top: 20px;
+    left : -80px;
+    width: 60px;
+    height: 15px;
+    cursor : pointer;
+}
+
+.open {
+    position: absolute;
+    top: 0px;
+    left: -95px;
+    width: 100px;
+    height: 500px;
+    cursor: pointer;
+}
+
+.close img{
+    width: 100%;
+    height: auto;
+}
+
+
+.open .onTextBtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 16px;
+    height: 63px;
+}
+
+
+.open::after {
+    position: absolute;
+    display: block;
+    right: 5px;
+    top: 1px;
+    content :"";
+    width: 1px;
+    height: 40px;
+    background-color: hsla(0,0%,100%,0.5);
+}
+.arrow {
+    position :absolute;
+    top: -2px;
+    left: -6px;
+    width: 11px;
+    height: 8px;
+    opacity: .5;
+    vertical-align: top;
+    
+}
+
+.closeTab .text {
+    color : white;
+}
+
+.oepnTab .text {
+    color : black;
+}
+
+/* .openTab {
+    bottom :0;
+    background-color: #fff;
+    transition: all .5s ease-out;
+} */
