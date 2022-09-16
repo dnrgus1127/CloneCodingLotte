@@ -245,3 +245,8 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+
+html {
+  --vh : 9.23px;
+}
